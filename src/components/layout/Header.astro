@@ -16,21 +16,15 @@ const currentPath = Astro.url.pathname;
     <a href="/portfolio-a3/" class="site-name" aria-label="Ashukla Portfolio home">
       Ashukla
     </a>
-
     <ul role="list">
       {navLinks.map(({ label, href }) => (
         <li>
-          
-            href={href}
-            aria-current={currentPath === href ? 'page' : undefined}
-            class="nav-link"
-          >
+          <a href={href} aria-current={currentPath === href ? 'page' : undefined} class="nav-link">
             {label}
           </a>
         </li>
       ))}
     </ul>
-
     <ThemeToggle />
   </nav>
 </header>
@@ -40,7 +34,6 @@ const currentPath = Astro.url.pathname;
     border-bottom: 1px solid rgb(var(--color-border));
     padding: 1rem;
   }
-
   nav {
     display: flex;
     align-items: center;
@@ -48,14 +41,12 @@ const currentPath = Astro.url.pathname;
     max-width: 64rem;
     margin: 0 auto;
   }
-
   .site-name {
     font-weight: 700;
     color: rgb(var(--color-text));
     text-decoration: none;
     margin-right: auto;
   }
-
   ul {
     display: flex;
     gap: 1.5rem;
@@ -63,13 +54,11 @@ const currentPath = Astro.url.pathname;
     margin: 0;
     padding: 0;
   }
-
   .nav-link {
     color: rgb(var(--color-text-muted));
     text-decoration: none;
     font-size: 0.95rem;
   }
-
   .nav-link[aria-current="page"] {
     color: rgb(var(--color-text));
     font-weight: 600;
